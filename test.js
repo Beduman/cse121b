@@ -1,5 +1,2 @@
-let scores = [5,10,15,20,25]
-
-let printscore = scores[scores.length - 1];
-
-console.log(printscore)
+let scores = [56, 78, 95, 77, 65, 86];
+let target = scores.indexOf(87);
