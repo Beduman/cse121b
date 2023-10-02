@@ -24,22 +24,22 @@ function subtract (number1, number2){
 }
 
 function subtractNumbers() {
-    let subtractNumber1 = Number(Document.querySelector('#subtract1').value)
-    let subtractNumber2 = Number(Document.querySelector('#subtract2').value)
-    Document.querySelector('#sum').value = (subtractNumber1, subtractNumber2)
+    let subtractNumber1 = Number(Document.querySelector('#subtract1').value);
+    let subtractNumber2 = Number(Document.querySelector('#subtract2').value);
+    Document.querySelector('#difference').value = (subtractNumber1, subtractNumber2);
 
     console.log("First Number: ", firstNumber);
     console.log("Second Number: ", secondNumber);
-    console.log("Sum: ", sum);
+    console.log("Difference: ", sum);
 }
 
 /* Arrow Function - Multiply Numbers */
 const multiply = (factor1, factor2) => factor1 + factor2;
 
 
-let factorNumber1 = Number(Document.querySelector('#factor1').value)
-let factorNumber2 = Number(Document.querySelector('#factor2').value)
-const multiplyNumbers = () => Document.querySelector('#product').value = (factorNumber1, factorNumber2)
+const factorNumber1 = () => Number(document.querySelector('#factor1').value);
+const factorNumber2 = () => Number(document.querySelector('#factor2').value);
+const multiplyNumbers = () => Document.querySelector('#product').value = (factorNumber1, factorNumber2);
 
 /* Open Function Use - Divide Numbers */
 function divide (dividend, divisor){
@@ -47,9 +47,9 @@ function divide (dividend, divisor){
 }
 
 function divideNumbers () {
-    let dividend = Number(Document.querySelector('dividend').value)
-    let divisor = Number(Document.querySelector('divisor').value)
-    Document.querySelector('#quotient').value = (dividend, divisor)
+    let dividend = Number(Document.querySelector('dividend').value);
+    let divisor = Number(Document.querySelector('divisor').value);
+    Document.querySelector('#quotient').value = (dividend, divisor);
 
     console.log("Dividend: ", dividend);
     console.log("Divisor: ", divisor);
@@ -60,8 +60,7 @@ function divideNumbers () {
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
-let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];
-Document.querySelector('array').value = array
+
 
 /* Output Odds Only Array */
 
