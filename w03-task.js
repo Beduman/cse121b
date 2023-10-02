@@ -7,16 +7,17 @@ function add (number1, number2){
 }
 
 function addNumbers() {
-    let addNumber1 = Number(Document.querySelector('#add1').value)
-    let addNumber2 = Number(Document.querySelector('#add2').value)
-    Document.querySelector('#sum').value = (addNumber1, addNumber2)
+    let addNumber1 = Number(Document.querySelector('#add1').value);
+    let addNumber2 = Number(Document.querySelector('#add2').value);
+    Document.querySelector('#sum').value = (addNumber1, addNumber2);
+    document.querySelector("#addNumbers").addEventListener('click', addNumbers);
 
     console.log("First Number: ", firstNumber);
     console.log("Second Number: ", secondNumber);
     console.log("Sum: ", sum);
+
 }
 
-document.querySelector("#addNumbers").addEventListener('click', addNumbers)
 /* Function Expression - Subtract Numbers */
 function subtract (number1, number2){
     return number1 + number2
