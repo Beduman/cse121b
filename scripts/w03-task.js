@@ -7,9 +7,9 @@ function add (number1, number2){
 }
 
 function addNumbers() {
-    let addNumber1 = Number(Document.querySelector('#add1').value);
-    let addNumber2 = Number(Document.querySelector('#add2').value);
-    Document.querySelector('#sum').value = (addNumber1, addNumber2);
+    let addNumber1 = Number(document.querySelector('#add1').value);
+    let addNumber2 = Number(document.querySelector('#add2').value);
+    document.querySelector('#sum').value = (addNumber1, addNumber2);
     document.querySelector("#addNumbers").addEventListener('click', addNumbers);
 
     console.log("First Number: ", firstNumber);
@@ -24,9 +24,9 @@ function subtract (number1, number2){
 }
 
 function subtractNumbers() {
-    let subtractNumber1 = Number(Document.querySelector('#subtract1').value);
-    let subtractNumber2 = Number(Document.querySelector('#subtract2').value);
-    Document.querySelector('#difference').value = (subtractNumber1, subtractNumber2);
+    let subtractNumber1 = Number(document.querySelector('#subtract1').value);
+    let subtractNumber2 = Number(document.querySelector('#subtract2').value);
+    document.querySelector('#difference').value = (subtractNumber1, subtractNumber2);
 
     console.log("First Number: ", firstNumber);
     console.log("Second Number: ", secondNumber);
@@ -39,7 +39,7 @@ const multiply = (factor1, factor2) => factor1 + factor2;
 
 const factorNumber1 = () => Number(document.querySelector('#factor1').value);
 const factorNumber2 = () => Number(document.querySelector('#factor2').value);
-const multiplyNumbers = () => Document.querySelector('#product').value = (factorNumber1, factorNumber2);
+const multiplyNumbers = () => document.querySelector('#product').value = (factorNumber1, factorNumber2);
 
 /* Open Function Use - Divide Numbers */
 function divide (dividend, divisor){
@@ -47,9 +47,9 @@ function divide (dividend, divisor){
 }
 
 function divideNumbers () {
-    let dividend = Number(Document.querySelector('dividend').value);
-    let divisor = Number(Document.querySelector('divisor').value);
-    Document.querySelector('#quotient').value = (dividend, divisor);
+    let dividend = Number(document.querySelector('dividend').value);
+    let divisor = Number(document.querySelector('divisor').value);
+    document.querySelector('#quotient').value = (dividend, divisor);
 
     console.log("Dividend: ", dividend);
     console.log("Divisor: ", divisor);
