@@ -18,21 +18,22 @@ function addNumbers() {
 document.querySelector("#addNumbers").addEventListener('click', addNumbers);
 /* Function Expression - Subtract Numbers */
 function subtract (number1, number2){
-    return number1 + number2
+    return number1 - number2
 }
 
 function subtractNumbers() {
     let subtractNumber1 = Number(document.querySelector('#subtract1').value);
     let subtractNumber2 = Number(document.querySelector('#subtract2').value);
+    document.querySelector('#difference').value = (subtractNumber1 - subtractNumber2);
 
-    console.log("First Number: ", firstNumber);
-    console.log("Second Number: ", secondNumber);
-    console.log("Difference: ", sum);
+    console.log("First Number: ", subtractNumber1);
+    console.log("Second Number: ", subtractNumber2);
+    console.log("Difference: ", difference);
 }
-document.querySelector('#difference').value = (subtractNumber1 - subtractNumber2);
+document.querySelector('#difference').addEventListener('click', subtractNumbers);
+
 /* Arrow Function - Multiply Numbers */
 const multiply = (factor1, factor2) => factor1 + factor2;
-
 
 const factorNumber1 = () => Number(document.querySelector('#factor1').value);
 const factorNumber2 = () => Number(document.querySelector('#factor2').value);
