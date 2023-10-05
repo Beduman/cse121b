@@ -16,6 +16,7 @@ function addNumbers() {
     console.log("Sum: ", sum);
 }
 document.querySelector("#addNumbers").addEventListener('click', addNumbers);
+
 /* Function Expression - Subtract Numbers */
 const subtract = function (number1, number2){
     return number1 - number2
@@ -30,14 +31,22 @@ const subtractNumbers = function () {
     console.log("Second Number: ", subtractNumber2);
     console.log("Difference: ", difference);
 }
-document.querySelector('#difference').addEventListener('click', subtractNumbers);
+document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);
 
 /* Arrow Function - Multiply Numbers */
-const multiply = (factor1, factor2) => factor1 + factor2;
+const multiply = (factor1, factor2) =>  {
+    product = factor1 * factor2
+    return product;
+}
 
-const factorNumber1 = () => Number(document.querySelector('#factor1').value);
-const factorNumber2 = () => Number(document.querySelector('#factor2').value);
-document.querySelector('#product').value = (factorNumber1, factorNumber2);
+function multiplyNumbers () {
+    factorNumber1 = Number(document.querySelector('#factor1').value); 
+    factorNumber2 = Number(document.querySelector('#factor2').value);
+    product = multiply(factorNumber1, factorNumber2)
+    document.querySelector('#product').value = (product);
+}
+document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
+
 /* Open Function Use - Divide Numbers */
 function divide (dividend, divisor){
     return dividend + divisor
@@ -46,12 +55,14 @@ function divide (dividend, divisor){
 function divideNumbers () {
     let dividend = Number(document.querySelector('dividend').value);
     let divisor = Number(document.querySelector('divisor').value);
+    quotient = divide(divided, divisor);
+    document.querySelector('#quotient').value = (quotient);
 
     console.log("Dividend: ", dividend);
     console.log("Divisor: ", divisor);
     console.log("Quotient: ", quotient);
 }
-document.querySelector('#quotient').value = (dividend / divisor);
+document.querySelector('#divideNumbers').addEventListener('click', divideNumbers)
 /* Decision Structure */
 
 
