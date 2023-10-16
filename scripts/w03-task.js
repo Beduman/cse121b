@@ -49,14 +49,13 @@ document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNum
 
 /* Open Function Use - Divide Numbers */
 function divide (dividend, divisor){
-    return dividend + divisor
+    return dividend / divisor
 }
 
 function divideNumbers () {
-    let dividend = Number(document.querySelector('dividend').value);
-    let divisor = Number(document.querySelector('divisor').value);
-    quotient = divide(divided, divisor);
-    document.querySelector('#quotient').value = (quotient);
+    let dividend = Number(document.querySelector('#dividend').value);
+    let divisor = Number(document.querySelector('#divisor').value);
+    document.querySelector('#quotient').value = (dividend / divisor);
 
     console.log("Dividend: ", dividend);
     console.log("Divisor: ", divisor);
@@ -68,14 +67,26 @@ document.querySelector('#divideNumbers').addEventListener('click', divideNumbers
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
+function isEven(value) {
+    return value % 2 == 0;
+}
+function isOdd(value) {
+    return value % 2 != 0;
+}
+
+
 let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];
 
+document.getElementById('array').innerHTML = numbersArray;
+
 /* Output Odds Only Array */
-
+document.getElementById('odds').innerHTML = numbersArray.filter(number=> number % 2 != 0);
 /* Output Evens Only Array */
-
+document.getElementById('evens').innerHTML = numbersArray.filter(number=> number % 2 === 0);
 /* Output Sum of Org. Array */
-
+document.getElementById('sumOfArray').innerHTML = numbersArray.reduce((sum,number) => sum + number);
 /* Output Multiplied by 2 Array */
-
+document.getElementById('multiplied').innerHTML = numbersArray.map(number => number * 2)
 /* Output Sum of Multiplied by 2 Array */
+multipliedArray = numbersArray.map(number => number * 2)
+document.getElementById('sumOfMultiplied').innerHTML = multipliedArray.reduce((sum,number) => sum + number);
