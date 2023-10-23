@@ -9,11 +9,11 @@ const displayTemples = (temples) => {
     temples.forEach((element) => {
         const article = document.createElement('article');
         const h3 = document.createElement('h3');
-        h3.textContent = temple.templeName;
+        h3.textContent = element.templeName;
         const img = document.createElement('img');
-        img.src = temple.imageUrl;
-        article.appendChild(h3, img);
-    
+        img.src = element.imageUrl;
+        article.appendChild(h3);
+        article.appendChild(img);
         templesElement.appendChild(article);
     });
 }
@@ -21,12 +21,14 @@ const displayTemples = (temples) => {
 /* async getTemples Function using fetch()*/
 const getTemples = async () => {
     const response = await fetch ("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json")
-    const templeList = await response.json
+    const templeList = await response.json();
+    templeList.push(response);
+    displayTemples(templeList);
 }
 
 /* reset Function */
 function reset() {
-    templeList = []
+    templesElement = '';
 }
 
 /* sortBy Function */
