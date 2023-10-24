@@ -1,7 +1,7 @@
 const monsterselement = document.getElementById('monsters');
-let monsterlist = [];
+let monsterList = [];
 
-const displayTemples = (temples) => {
+const displayMonsters = (temples) => {
     temples.forEach((element) => {
         const article = document.createElement('article');
         const h3 = document.createElement('h3');
@@ -15,4 +15,10 @@ const displayTemples = (temples) => {
         article.appendChild(img);
         monsterselement.appendChild(article);
     });
+}
+
+async function getMonsters () {
+    const response = await fetch("api.open5e.com/v1/monsters")
+    monsterList = await response.json();
+    displayMonsters(monsterList);
 }
