@@ -51,7 +51,7 @@ function sortBy(temples) {
 }
 
 /* Event Listener */
-document.getElementById('sortBy').addEventListener('change', () => { sortBy(templeList) });
+document.getElementById('sortBy').addEventListener('change', () => { sortBy(templeList)});
 
 getTemples();
 
