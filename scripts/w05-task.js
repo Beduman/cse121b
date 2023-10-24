@@ -32,6 +32,7 @@ function reset() {
 
 /* sortBy Function */
 function sortBy(temples) {
+    document.getElementById('sortBy').value;
     reset();
     const filter = document.getElementById('sortBy').value;
     switch (filter) {
