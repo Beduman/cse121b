@@ -20,9 +20,8 @@ const displayTemples = (temples) => {
 
 /* async getTemples Function using fetch()*/
 const getTemples = async () => {
-    const response = await fetch ("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json")
+    const response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json")
     templeList = await response.json();
-    templeList.push(response);
     displayTemples(templeList);
 }
 
@@ -33,9 +32,8 @@ function reset() {
 
 /* sortBy Function */
 function sortBy(temples) {
-    document.getElementById('temples');
     reset();
-    const filter = document.getElementById('sortBy');
+    const filter = document.getElementById('sortBy').value;
     switch (filter) {
         case 'utah':
             displayTemples(temples.filter(temple => temple.location.includes('Utah')));
@@ -52,6 +50,7 @@ function sortBy(temples) {
 }
 
 /* Event Listener */
-document.querySelector('sortby').addEventListener('change', () => {sortBy(templeList)});
+document.getElementById('sortBy').addEventListener('change', () => { sortBy(templeList) });
 
 getTemples();
+
