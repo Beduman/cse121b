@@ -11,13 +11,13 @@ async function displayMonsters(monsters) {
     monsters.forEach((element) => {
         const article = document.createElement('article');
         const h3 = document.createElement('h3');
-        h3.textContent = element.slug;
+        h3.textContent = `${element.slug}`
         const p = document.createElement('p');
-        p.textContent = element.type;
+        p.textContent = `${element.type}`;
         const size = document.createElement('p');
-        size.textContent = element.size;
+        size.textContent = `${element.size}`;
         const description = document.createElement('p');
-        description.textContent = element.desc
+        description.textContent = `${element.desc}`;
         article.appendChild(h3);
         article.appendChild(p);
         article.appendChild(size);
